@@ -75,7 +75,7 @@ function main() {
   $("#clicker").click(generate);
   
   generate();
-  
+}
   // call a method on the instance
 //   myInstance.myMethod();
 // }
