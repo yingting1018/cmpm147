@@ -77,7 +77,7 @@ function main() {
   generate();
 }
   // call a method on the instance
-//   myInstance.myMethod();
+  myInstance.myMethod();
 // }
 
 // // let's get this party started - uncomment me
