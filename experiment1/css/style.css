@@ -17,3 +17,12 @@ body {
     width: 100%;
     height: 600px;
 }
+
+#box {
+      font-family: fantasy; 
+      border: thin baby pink; 
+      padding: 2em; 
+      margin: 1em; 
+      box-shadow: 2px 2px 5px pink; 
+      background: #ffeeff;
+}
