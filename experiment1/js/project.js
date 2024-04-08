@@ -24,6 +24,8 @@ class MyProjectClass {
 
 function main() {
   // create an instance of the class
+  let myInstance = new MyProjectClass("value1", "value2");
+  
   const fillers = {
     cat: ["Kitty", "Kitten", "Cat", "baby", "Whiskers", "meow", "miao miao", "$cat and $cat", "$cat, $cat, and $cat",],
     sound: ["sad meow", "hiss", "rawr", "roar", "grrr"],
