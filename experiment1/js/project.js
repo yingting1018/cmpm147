@@ -81,9 +81,7 @@ function main() {
    // call a method on the instance
    myInstance.myMethod();
 }
-  // // call a method on the instance
-  // myInstance.myMethod();
-// }
+
 
 // // let's get this party started - uncomment me
 main();

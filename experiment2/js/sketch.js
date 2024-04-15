@@ -15,6 +15,13 @@ let myInstance;
 let canvasContainer;
 var centerHorz, centerVert;
 
+let seed = 0;
+
+const grassColor = "#CCCB5F";
+const skyColor = "#39ACFD";
+let stoneColor = "#626C6D";
+const treeColor = "#5B7545";
+
 class MyClass {
     constructor(param1, param2) {
         this.property1 = param1;
@@ -34,8 +41,15 @@ function resizeScreen() {
   // redrawCanvas(); // Redraw everything based on new size
 }
 
+// listener for reimagine button
+$("#reimagine").click(function() {
+  seed = millis();
+});
+
 // setup() function is called once when the program starts
 function setup() {
+  createCanvas(400, 200);
+  
   // place our canvas, making it fit our container
   canvasContainer = $("#canvas-container");
   let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
@@ -53,24 +67,55 @@ function setup() {
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-  background(220);    
-  // call a method on the instance
-  myInstance.myMethod();
+  randomSeed(seed);
 
-  // Set up rotation for the rectangle
-  push(); // Save the current drawing context
-  translate(centerHorz, centerVert); // Move the origin to the rectangle's center
-  rotate(frameCount / 100.0); // Rotate by frameCount to animate the rotation
-  fill(234, 31, 81);
+  background(100);
+
   noStroke();
-  rect(-125, -125, 250, 250); // Draw the rectangle centered on the new origin
-  pop(); // Restore the original drawing context
 
-  // The text is not affected by the translate and rotate
-  fill(255);
-  textStyle(BOLD);
-  textSize(140);
-  text("p5*", centerHorz - 105, centerVert + 40);
+  fill(skyColor);
+  rect(0, 0, width, height / 3  * 2);
+
+  // clouds
+  fill("#EEEEEE")
+  const clouds = 20;
+  for (let i = 0; i < clouds; i++) {
+    let z = 1 + random();
+    let x = width * ((random() + millis() / 400000.0) / z) % width;
+    let y = height / 2 + height / 10 * random();
+    let s = width / 10 / z; // Adjust size based on z
+    ellipse(x, y, s, s / 2); // Ellipse shape for clouds
+  }
+  
+  
+  fill(grassColor);
+  rect(0, height / 3  * 2, width, height / 3  * 2);
+ 
+  fill(stoneColor)
+  beginShape();
+  const scrub = mouseX/width;
+  vertex(width/3 + random() * width/20, height / 3  * 2);
+
+  vertex(width/3 + random() * width/20 + width/20, height / 7 * 4);
+
+  vertex(width/3 + random() * width/20 + width/10, height/10 + random() * height/20);
+  vertex(width/3*2 - random() * width/20 - width/10 , height/10 + random() * height/20);
+
+  vertex(width/3*2 - random() * width/20 - width/20 , height / 7 * 4);
+
+  vertex(width/3*2 - random() * width/20, height / 3  * 2);
+  endShape(CLOSE);
+
+  fill(treeColor);
+  const trees = 400*random();
+  
+  for (let i = 0; i < trees; i++) {
+    let z = .1 + random();
+    let x = width * ((random() + (scrub/50 + millis() / 500000.0) / z) % 1);
+    let s = width / 50 / z;
+    let y = height / 3  * 2 + height / 20 / z;
+    triangle(x, y - s, x - s / 4, y, x + s / 4, y);
+  }
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
