@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 3 - Alternate Worlds</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -27,14 +27,20 @@
 	<!-- Use me for a p5.js project -->
 	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
 </head>
+<style>
+	/* CSS Style for the background color */
+	body {
+		background-color: #cde9d4; /* Change this to the desired color */
+	}
+</style>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 3 - Alternate Worlds</h1>
 
-			<div class="minor-section">
+			<!-- <div class="minor-section"> -->
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
@@ -44,19 +50,31 @@
 			</div>
 
 			<div class="minor-section">
-				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<div class="square">
+					<h2>Description</h2>
+					<p>This project generates a structure of an overworld, which is a green foresty terrain with cozy homes and lakes, and a dungeon map with different rooms, using auto tiling which allows the user to edit the tiles. We used the tileset created by Kacper Wozniak.
+					</p>
+	
+		</div>
+
+			<div class="square">
+				<h2>Codes</h2>
+				<p>For the overworld, using a dot (.) will edit the dark grass patches, w for the water, h for the house, underscore (_) for the light green patches of grass, and a T for the trees. For the dungeon we use a plus (+) for the background, d for the doors, and * for the gray room flooring. Furthermore, to move the slime monster we created, you can use WASD or the arrow keys.
+					?</p>
 			</div>
 
-			<div class="minor-section">
-				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+			<div class="square">
+				<h2>Life</h2>
+				<p>We created a slime sprite that is completely movable by the user by using WASD or the arrow keys. Furthermore, we have sparkles in the water, clouds that move across the y-axis as time goes by, and in the overworld it goes from day to night in a couple seconds. (using tiles from Micro Tileset - Overworld & Dungeon by thkaspar)
+
+				</p>
 			</div>
 
-			<div class="minor-section">
+			<div class="square">
 				<h2>Reflection</h2>
 				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
 			</div>
+		</div>
 
 		</section>
 		<nav id="links" class="minor-section">
