@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 5 - Evolutionary Impressions</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+	<script type="text/javascript" src="./js/my_design.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1 id="experiment-title">Experiment 5 - Evolutionary Impressions</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+                    <div id="canvas-and-image-container">
+                    <select id="dropper"></select>
+                    <option value="einstein">Einstein</option>
+                    <option value="wave">The Great Wave off Kanagawa</option>
+                    <option value="wanderer">Wanderer above the Sea of Fog</option>
+                </select>
+                    <button id="restart">Restart</button>
+                    <p>
+                        
+                        Mutation rate (<span id="rate"></span>%):<br />
+                        <input
+                            id="slider"
+                            type="range"
+                            min="1"
+                            max="100"
+                            value="100"
+                        />
+                    </p>
+                    <p id="inspiration-image-label">Inspiration Image</p>
+                    <img id="inspiration-image" src="" alt="Inspiration Image" width="500">
+                    <!-- <img id="einstein-img" src="img/albert einstein tongue.avif" alt="Einstein Image" width="500"> -->
+                    </div> 
+                </div>
+                <p id="active-image-label">Active Image</p>
+					<p id="active"></p>
+					<p>Active score: <span id="activeScore"></span></p>
+					<p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+                    <p id="best-image-label">Best Image</p>
+					<p id="best"></p>
+					<p>Best score: <span id="bestScore"></span></p>
+					<p id="memory" data-max-items="16"></p>
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>In this assignment, we built a generator which takes in three images that we have chosen, reads them, and creates a rendered, parameterized image. </p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>You can switch between the three images using the drop down, and we have a slider that goes from 0-100% which controls the mutation rate.
+                    Then, we show a picture of the inspired picture being changed, along with an active score and exploration rate. 
+                    After that, the best picture is changed, but this picture also changes as time goes on and the generator finds a better match.
+                    Then, we move on to showing the best score and best images that come after the best one.
+                </p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>It was fun getting to choose what pictures to do, along with what shapes to draw them with. We enjoyed creating each image with a different shape, but also working with different colors and types of images.</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>

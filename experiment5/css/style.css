@@ -1,0 +1,56 @@
+/* style.css */
+
+/* Set the canvas element to be the full size of the container */
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the canvas element on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 224, 217)
+}
+
+/* #canvas-container {
+    width: 100%;
+    height: auto;
+} */
+
+#experiment-title {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.1em; /* Adjust spacing as needed */
+    text-transform: uppercase; /* Convert text to all caps */
+    font-size: 3em; /* Adjust font size as needed */
+    text-align: center; /* Center align the text */
+}
+.minor-section h2 {
+    font-size: 3em; /* Adjust the size as needed */
+}
+
+.minor-section p {
+    font-size: 2em; /* Adjust the size as needed */
+}
+#inspiration-image-label {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.1em; /* Adjust spacing as needed */
+    text-transform: uppercase; /* Convert text to all caps */
+    font-size: 2em; /* Adjust font size as needed */
+    /* text-align: center; Center align the text */
+}
+#best-image-label {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.1em; /* Adjust spacing as needed */
+    text-transform: uppercase; /* Convert text to all caps */
+    font-size: 2em; /* Adjust font size as needed */
+    /* text-align: center; Center align the text */
+}
+#active-image-label {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.1em; /* Adjust spacing as needed */
+    text-transform: uppercase; /* Convert text to all caps */
+    font-size: 2em; /* Adjust font size as needed */
+    /* text-align: center; Center align the text */
+}
